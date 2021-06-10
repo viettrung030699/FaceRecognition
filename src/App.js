@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./Styles/style.scss";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Homepage } from "./Pages/Homepage/Homepage";
+import { Dashboard } from "./Pages/Management/Dashboard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={Homepage}></Route>
+
+          {localStorage.getItem("authentication") != null ? (
+            <Route path="/dashboard" component={Dashboard}></Route>
+          ) : (
+            <Route path="/" exact component={Homepage}></Route>
+          )}
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
