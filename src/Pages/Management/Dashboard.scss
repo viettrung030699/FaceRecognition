@@ -1,7 +1,17 @@
-@import "../../Styles/style.scss";
-
-.dashboard {
+.Dashboard {
   .context {
     position: unset;
+  }
+
+  .body {
+    padding: 40px 50px 40px 50px;
+    text-align: center;
+
+    table {
+      h3 {
+        font-weight: 800;
+        color: #202630;
+      }
+    }
   }
 }
