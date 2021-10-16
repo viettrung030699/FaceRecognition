@@ -57,6 +57,10 @@ body {
   // top: 40vh;
   z-index: 1;
 
+  .heading {
+    padding-top: 100px
+  }
+
   @include bp-small-device {
     // top: 35vh;
   }

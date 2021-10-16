@@ -6,7 +6,7 @@ export const Homepage = () => {
   return (
     <div className="Homepage">
       <div className="context">
-        <h1 className="height10">Quiz Dance</h1>
+        <h1 className="height10 heading">Attendance <br/> System</h1>
         <Login />
       </div>
 
